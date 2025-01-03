@@ -61,7 +61,36 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Deploy to production
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Python dependencies
       run: |
-        echo "Deploying to production..."
-        # Add your deployment commands here
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+
+    - name: Deploy Python app
+      run: |
+        echo "Deploying Python app..."
+        # Add your Python deployment commands here
+        # Example:
+        # scp -r backend/* user@server:/path/to/deploy
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Node.js dependencies
+      run: |
+        cd frontend
+        npm install
+
+    - name: Deploy Node.js app
+      run: |
+        echo "Deploying Node.js app..."
+        # Add your Node.js deployment commands here
+        # Example:
+        # scp -r frontend/* user@server:/path/to/deploy
