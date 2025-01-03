@@ -1,0 +1,20 @@
+# Flask is a micro web framework
+Flask==2.0.2
+
+# Requests is a simple HTTP library
+requests==2.26.0
+
+# NumPy is a package for scientific computing
+numpy==1.21.2
+
+# Pandas is a data manipulation and analysis library
+pandas==1.3.3
+
+# Matplotlib is a plotting library
+matplotlib==3.4.3
+
+# Scikit-learn is a machine learning library
+scikit-learn==0.24.2
+
+# SQLAlchemy is an SQL toolkit and ORM
+SQLAlchemy==1.4.25
